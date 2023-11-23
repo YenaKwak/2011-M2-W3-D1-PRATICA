@@ -225,30 +225,104 @@ console.log(result);  // 출력: 18 (차이는 6이므로 19보다 작아서 6 �
 
 
 
-
-
-
-
-
-
-
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* 
+// If the string starts with "code"
+function codify(string) {
+  if (string.startsWith("code")){
+  // Return the original string without any changes
+  return string;
+
+} else {
+  // If the string doesn't start with "code", add "code" to the beginning
+  // and return the modified string
+  return "code"+string ;
+}
+}
+
+
+
+let result = codify("hello");
+let resultTwo = codify("codeEpi");
+
+console.log(result);
+console.log(resultTwo);
+
+
+
+or
+
+function codify(string) {
+   return string.startsWith("code") ? string : "code" + string;
+}
+
+let result = codify("hello");
+let resultTwo = codify("codeEpi");
+
+console.log(result);
+console.log(resultTwo);
+
+
+*/
+
+
+
 
 /* ESERCIZIO 4
- Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
- La funzione deve controllare che tale parametro sia un multiplo di 3 o di 7, e in tal caso tornare true; altrimenti deve tornare false.
- SUGGERIMENTO: operatore modulo
+Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo(positive integer 0보다 큰 양의정수) come parametro.
+La funzione deve controllare che tale parametro sia un multiplo di 3 o di 7, 
+이 함수는 매개변수가 3 또는 7의 배수인지 확인을 해야함
+
+in tal caso tornare true; altrimenti deve tornare false.
+맞으면 true 거짓이면 false로 결과 반환되게
+SUGGERIMENTO: operatore modulo
+(The modulus operator, often represented by the % symbol, is a mathematical operator that returns the remainder of the division of one number by another.)
+*/
+/* 
+
+function check3and7(number) {
+
+  return number % 3 === 0 || number % 7 === 0;
+}
+
+let result = check3and7(9);     
+let resultTwo = check3and7(14); 
+let resultThree = check3and7(2); 
+
+console.log(result);
+console.log(resultTwo);
+console.log(resultThree);
+
+
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+
+
+
 
 /* ESERCIZIO 5
- Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
+Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* 
+function cutString(string){
+
+  if(string.length >= 2) {
+  return string.slice(1, -1);
+}else {
+  return " ";
+
+}
+}
+
+let someString = "comestai"
+let result = cutString(someString);
+
+console.log(result);
+
+*/
